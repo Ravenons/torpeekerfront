@@ -1,0 +1,53 @@
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+        ". .    ."
+        ". main ."
+        ". .    .";
+}
+
+#title {
+    font-size: 400%;
+    margin: 0;
+}
+
+#content {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+#input-url {
+    width: 100%;
+    display: block;
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid #ddd;
+    padding: 0.3em;
+}
+
+/*
+#rot {
+    display: inline-block;
+    animation: rotat 1.25s infinite linear;
+    animation-delay: 5s;
+}
+
+@keyframes rotat {
+    from {
+        transform: rotate(0deg);
+        transform-origin: 42% 58%;
+    }
+    to {
+        transform: rotate(359deg);
+        transform-origin: 42% 58%;
+    }
+}
+*/
