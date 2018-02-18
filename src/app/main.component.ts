@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { BackendService } from './backend.service';
-import { VisitResult } from './visit-result';
+import { VisitTicket } from './visit-ticket';
 
 @Component({
   selector: 'tp-main',
@@ -16,10 +16,10 @@ export class MainComponent {
     
   setUrl(url: string): void {
     this.backend.visitUrl(url)
-      .subscribe(visitResult => this.navigateToResult(visitResult.resultId));
+      .subscribe(visitTicket => this.navigateToResult(visitTicket.ref));
   }
   
-  navigateToResult(resultId: string): void {
-    this.router.navigateByUrl('/visit/' + resultId);
+  navigateToResult(ref: string): void {
+    this.router.navigateByUrl('/visit/' + ref);
   }
 }

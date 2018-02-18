@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main.component';
@@ -11,13 +12,14 @@ import { BackendService } from './backend.service';
   declarations: [
     AppComponent,
     MainComponent,
-    ResultComponent
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule, 
   ],
   providers: [BackendService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
