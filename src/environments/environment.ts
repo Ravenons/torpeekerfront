@@ -6,4 +6,5 @@
 export const environment = {
   production: false,
   VISIT_TICKET: "http://localhost:8000/visit",
+  VISIT_RESULT: "http://localhost:8000/visit_result/",
 };

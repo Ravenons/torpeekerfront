@@ -6,7 +6,7 @@ import { ResultComponent } from './result.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'visit/:id', component: ResultComponent }
+  { path: 'visit/:ref', component: ResultComponent }
 ];
 
 @NgModule({

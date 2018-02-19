@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main.component';
 import { ResultComponent } from './result.component';
+import { ModalImageComponent } from './modal-image.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BackendService } from './backend.service';
 
@@ -13,6 +14,7 @@ import { BackendService } from './backend.service';
     AppComponent,
     MainComponent,
     ResultComponent,
+    ModalImageComponent,
   ],
   imports: [
     BrowserModule,

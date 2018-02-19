@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
 
 import { VisitTicket } from './visit-ticket';
+import { VisitResult } from './visit-result';
+
 import { environment } from '../environments/environment';
 
 @Injectable()
@@ -17,10 +17,8 @@ export class BackendService {
                                        { 'url': url });
   }
 
-/*
-  visitResult(visitTicket: VisitTicket): Observable<VisitResult> {
-    const visitResult = new VisitResult('');
-    return of(visitResult);
+  visitResult(ref: string): Observable<VisitResult> {
+    const url = environment.VISIT_RESULT + ref;
+    return this.http.get<VisitResult>(url);
   }
-*/
 }
