@@ -6,10 +6,7 @@ import { ModalImageComponent } from './modal-image/modal-image.component';
 
 @NgModule({
   imports: [
-    CommonModule
-  ],
-  exports: [
-    ResultComponent,
+    CommonModule,
   ],
   declarations: [
     ResultComponent,

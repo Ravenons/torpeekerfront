@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { BackendService } from '../../backend.service';
-import { VisitTicket } from '../../visit-ticket';
+import { BackendService } from '../../core/backend.service';
+import { VisitTicket } from '../../core/visit-ticket';
 
 @Component({
   selector: 'tp-entry',

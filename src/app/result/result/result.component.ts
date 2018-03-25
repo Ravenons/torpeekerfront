@@ -5,8 +5,8 @@ import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/mergeMap';
 import polling from 'rx-polling';
 
-import { BackendService } from '../../backend.service';
-import { VisitResult } from '../../visit-result';
+import { BackendService } from '../../core/backend.service';
+import { VisitResult } from '../../core/visit-result';
 
 @Component({
   selector: 'tp-result',

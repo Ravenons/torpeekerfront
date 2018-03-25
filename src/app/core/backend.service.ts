@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { VisitTicket } from './visit-ticket';
 import { VisitResult } from './visit-result';
 
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class BackendService {
