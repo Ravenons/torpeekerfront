@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { BackendService } from './backend.service';
-import { VisitTicket } from './visit-ticket';
+import { BackendService } from '../../backend.service';
+import { VisitTicket } from '../../visit-ticket';
 
 @Component({
-  selector: 'tp-main',
-  templateUrl: './main.component.html',
-  styleUrls: [ './main.component.css' ],
+  selector: 'tp-entry',
+  templateUrl: './entry.component.html',
+  styleUrls: [ './entry.component.css' ],
 })
-export class MainComponent {
+export class EntryComponent {
 
   constructor(private router: Router,
               private backend: BackendService) { }

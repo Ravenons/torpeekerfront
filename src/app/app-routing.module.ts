@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MainComponent } from './main.component';
-import { ResultComponent } from './result.component';
+import { EntryComponent } from './entry/entry/entry.component';
+import { ResultComponent } from './result/result/result.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
+  { path: '', component: EntryComponent },
   { path: 'visit/:ref', component: ResultComponent }
 ];
 
