@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ResultComponent } from './result/result.component';
-import { ModalImageComponent } from './modal-image/modal-image.component';
+import { ResultBoxComponent } from './result-box/result-box.component';
 
 @NgModule({
   imports: [
@@ -10,7 +10,7 @@ import { ModalImageComponent } from './modal-image/modal-image.component';
   ],
   declarations: [
     ResultComponent,
-    ModalImageComponent,
+    ResultBoxComponent,
   ],
 })
 export class ResultModule { }

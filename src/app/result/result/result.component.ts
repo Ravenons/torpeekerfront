@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
@@ -13,10 +13,11 @@ import { VisitResult } from '../../core/visit-result';
   templateUrl: './result.component.html',
   styleUrls: [ './result.component.css' ],
 })
-export class ResultComponent implements OnInit {
+export class ResultComponent implements OnInit, OnDestroy {
 
-  imageBase64Result: string;
+  imageResultURL: string = "/assets/jpg/placeholder.jpg";
   subscription: Subscription;
+  isChildReady = false;
 
   constructor(private route: ActivatedRoute,
               private backend: BackendService) { }
@@ -30,9 +31,17 @@ export class ResultComponent implements OnInit {
                      { interval: 1000 });
     }).subscribe(visitResult => {
       if (visitResult.is_ready) {
-        this.imageBase64Result = visitResult.screenshot;
+        this.imageResultURL = visitResult.screenshot;
         this.subscription.unsubscribe();
       }
     });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
+  childReady() {
+    this.isChildReady = true;
   }
 }

@@ -1,5 +1,7 @@
 <main>
     <div id="content">
-        <tp-modal-image [imageBase64]="imageBase64Result"></tp-modal-image>
+        <tp-result-box [hidden]="!isChildReady"
+            [imageSrc]="imageResultURL" (onResourcesLoaded)="childReady()">
+        </tp-result-box>
     </div>
 </main>
