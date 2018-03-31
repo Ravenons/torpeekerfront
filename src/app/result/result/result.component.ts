@@ -15,7 +15,7 @@ import { VisitResult } from '../../core/visit-result';
 })
 export class ResultComponent implements OnInit, OnDestroy {
 
-  imageResultURL: string = "/assets/jpg/placeholder.jpg";
+  imageResultURL: string = "/assets/images/placeholder.jpg";
   subscription: Subscription;
   isChildReady = false;
 
@@ -31,8 +31,8 @@ export class ResultComponent implements OnInit, OnDestroy {
                      { interval: 1000 });
     }).subscribe(visitResult => {
       if (visitResult.is_ready) {
-        this.imageResultURL = visitResult.screenshot;
         this.subscription.unsubscribe();
+        this.imageResultURL = visitResult.screenshot;
       }
     });
   }

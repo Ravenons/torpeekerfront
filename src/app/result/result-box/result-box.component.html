@@ -1,6 +1,5 @@
 <div id="resultBox">
-    jijijiji
     <img [src]="imageSrc" id="image"
-        (click)="goToImage()" (load)="imageLoaded()">
-    asdfasdf
+        (click)="goToImage()" (load)="imageSuccess()" (error)="imageError()">
+    <div id="bottomText">Remember, Tor is quite slow...</div>
 </div>

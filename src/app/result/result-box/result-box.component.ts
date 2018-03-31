@@ -10,13 +10,31 @@ import { Inject } from '@angular/core';
 export class ResultBoxComponent {
 
   @Input() imageSrc: string;
-  @Output() onResourcesLoaded = new EventEmitter<any>();
+  @Output() onComponentReady = new EventEmitter<any>();
+
+  errorImageURL: string = "/assets/images/error.png";
+
+  componentReady: boolean = false;
 
   constructor(@Inject(DOCUMENT) private document: any) { }
 
-  imageLoaded() {
-    console.log("jeeee");
-    this.onResourcesLoaded.emit(null);
+  imageSuccess() {
+    if (!this.componentReady) {
+      this.componentReady = true;
+      this.onComponentReady.emit(null);
+    }
+  }
+
+  imageError() {
+    if (this.imageSrc !== this.errorImageURL) {
+      this.imageSrc = this.errorImageURL;
+    } else {
+      // We tried to load error image, but failed (oh the irony!), so be it
+      if (!this.componentReady) {
+        this.componentReady = true;
+        this.onComponentReady.emit(null);
+      }
+    }
   }
 
   goToImage(): void {
