@@ -9,10 +9,21 @@ import { Inject } from '@angular/core';
 })
 export class ResultBoxComponent {
 
-  @Input() imageSrc: string;
+  private _imageSrc: string;
+
+  @Input() 
+  set imageSrc(imageSrc: string) {
+    this._imageSrc = (imageSrc === null ?
+                      this.placeholderImageURL : imageSrc);
+  }
+  get imageSrc(): string {
+    return this._imageSrc;
+  } 
+
   @Output() onComponentReady = new EventEmitter<any>();
 
   errorImageURL: string = "/assets/images/error.png";
+  placeholderImageURL: string = "/assets/images/placeholder.jpg";
 
   componentReady: boolean = false;
 

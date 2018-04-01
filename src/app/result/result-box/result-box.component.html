@@ -1,5 +1,4 @@
-<div id="resultBox">
-    <img [src]="imageSrc" id="image"
-        (click)="goToImage()" (load)="imageSuccess()" (error)="imageError()">
-    <div id="bottomText">Remember, Tor is quite slow...</div>
-</div>
+<img id="image" [src]="imageSrc"
+     [ngClass]="{'flip-animation': imageSrc === placeholderImageURL}"
+     (click)="goToImage()" (load)="imageSuccess()" (error)="imageError()">
+<div id="bottomText">Remember, Tor is quite slow...</div>

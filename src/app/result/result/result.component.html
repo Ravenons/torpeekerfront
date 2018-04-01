@@ -1,7 +1,6 @@
 <main>
-    <div id="content">
-        <tp-result-box [hidden]="!isChildReady" [imageSrc]="imageResultURL"
-                       (onComponentReady)="childReady()">
-        </tp-result-box>
-    </div>
+    <tp-result-box id="resultBox"
+                   [hidden]="!isChildReady" [imageSrc]="imageResultURL"
+                   (onComponentReady)="childReady()">
+    </tp-result-box>
 </main>

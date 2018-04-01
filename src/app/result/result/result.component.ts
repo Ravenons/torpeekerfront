@@ -15,7 +15,7 @@ import { VisitResult } from '../../core/visit-result';
 })
 export class ResultComponent implements OnInit, OnDestroy {
 
-  imageResultURL: string = "/assets/images/placeholder.jpg";
+  imageResultURL: string = null;
   subscription: Subscription;
   isChildReady = false;
 
