@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  VISIT_TICKET: "http://localhost:8000/backend/visit",
-  VISIT_RESULT: "http://localhost:8000/backend/visit_result/",
+  VISIT_TICKET: "http://127.0.0.1:8000/backend/visit",
+  VISIT_RESULT: "http://127.0.0.1:8000/backend/visit_result/",
 };
